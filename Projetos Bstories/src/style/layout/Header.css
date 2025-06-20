@@ -1,52 +1,32 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #5e2b2b;
-    padding: 10px 30px;
-    color: white;
-    position: relative;
-    z-index: 10;
+  background-color: #72373D;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
+.logo img {
+  height: 48px;
+  width: auto;
 }
 
-
-.nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.menu a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
-.nav-menu a {
-    color: white;
-    text-decoration: none;
+.menu a:hover {
+  text-decoration: underline;
 }
 
-.social-icons a {
-    margin-left: 10px;
-    color: white;
-}
-
-.user-icon {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-left: 10px;
-}
-
-.user-icon i {
-    font-size: 1.2rem;
-}
-
-.logo-img {
-    height: 40px;         /* altura ideal para navbar */
-    max-width: 100%;      /* evita que ultrapasse o espaço */
-    object-fit: contain;  /* garante que ela fique dentro da caixa */
-    display: block;       /* tira espaço extra abaixo da imagem */
+.usuario-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
 }

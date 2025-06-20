@@ -4,8 +4,8 @@ import logo from '../assets/images/logo.png';
 import '../style/pages/login.css';
 
 const usuarios = [
-  { usuario: 'admin', senha: 'admin123', tipo: 'admin' },
-  { usuario: 'vendas', senha: '123', tipo: 'vendas' },
+  { usuario: 'admin', senha: 'admin123', tipo: 'Adm.meca' },
+  { usuario: 'vendas', senha: '123', tipo: 'Vendas.meca' },
   // Adicione outros usuários conforme necessário
 ];
 
@@ -27,14 +27,14 @@ function Login() {
       localStorage.setItem('usuarioLogado', user.usuario);
 
       switch (user.tipo) {
-        case 'vendas':
-          navigate('/Ponto De Vendas');
+        case 'Vendas.meca':
+          navigate('/Ponto-De-Vendas');
           break;
         case 'ecommerce':
           navigate('/');
           break;
-        case 'admin':
-          navigate('/');
+        case 'Adm.meca':
+          navigate('/Vendas');
           break;
         case 'rh':
           navigate('/');
@@ -48,7 +48,7 @@ function Login() {
   };
 
   return (
-    <div>
+    <div className="pagina-login">
       <div className="left"></div>
       <div className="right"></div>
 

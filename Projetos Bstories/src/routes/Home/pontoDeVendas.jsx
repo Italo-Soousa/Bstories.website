@@ -13,7 +13,7 @@ const PontoDeVendas = () => {
         <section className="categorias">
           <h2>Encontre a sua dúvida aqui agora:</h2>
           <div className="container">
-            <Link to="/Processos PDV" className="categoria">
+            <Link to="/Processos-PDV" className="categoria">
               <i className="fa-solid fa-cash-register"></i>
               <p>Ponto de Vendas</p>
             </Link>

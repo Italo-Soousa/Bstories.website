@@ -1,18 +1,30 @@
-import logo from '../assets/images/logo.png';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../style/layout/Header.css"; 
+import logo from "../assets/images/logo.png"
 
-export default function Header() {
+const Header = () => {
+  const tipoUsuario = localStorage.getItem("usuarioLogado");
+
   return (
     <header className="header">
-      <nav className="nav-menu">
-        <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
-        <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
-        <a href="#" aria-label="YouTube"><i className="fab fa-youtube"></i></a>
-      </nav>
-
       <div className="logo">
-        <img src={logo} alt="Logo B.stories" className="logo-img" />
+        <img src={logo} alt="B.stories logo" />
       </div>
+      <nav className="menu">
+        <Link to="/">Início</Link>
+        <Link to="/politicas">Políticas</Link>
+        <Link to="/sobre">Sobre</Link>
+        <Link to="/contato">Contato</Link>
+      </nav>
+      {tipoUsuario && (
+        <div className="usuario-info">
+          <i className="fa-solid fa-user-circle"></i>
+          <span>{tipoUsuario}</span>
+        </div>
+      )}
     </header>
   );
-}
+};
+
+export default Header;

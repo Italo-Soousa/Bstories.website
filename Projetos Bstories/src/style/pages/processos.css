@@ -1,20 +1,21 @@
-.página {
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-  }
+.pagina {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
   
   .pagina-main {
     flex: 1;
     padding: 40px 20px;
   }
 
-main.passo-container {
+/* MAIN LAYOUT */
+.pagina-bloco {
   display: flex;
   max-width: 1200px;
   margin: 2rem auto;
@@ -22,118 +23,109 @@ main.passo-container {
   padding: 0 1.5rem;
 }
 
-aside.sidebar {
-  background-color: #5e2b2b;
-  color: #fff;
+/* SIDEBAR STYLE */
+.sidebar-bloco {
   width: 250px;
-  padding: 1.5rem;
+  background-color: #fff;
+  border: 1px solid #eee;
   border-radius: 8px;
+  padding: 1rem;
   flex-shrink: 0;
   align-self: flex-start;
 }
 
-aside.sidebar h4 {
-  margin-top: 0;
-  font-size: 1.1rem;
+.sidebar-bloco h2 {
+  font-size: 1.2rem;
   margin-bottom: 1rem;
+  color: #333;
 }
 
-aside.sidebar ul {
+.sidebar-bloco ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-aside.sidebar li {
-  padding: 0.6rem 0.8rem;
-  border-radius: 4px;
+.sidebar-bloco li {
   margin-bottom: 0.5rem;
-  background-color: transparent;
-  cursor: pointer;
-  transition: background 0.3s;
 }
 
-aside.sidebar li:hover,
-aside.sidebar li.active {
-  background-color: #fff;
-  color: #5e2b2b;
+.sidebar-bloco a {
+  text-decoration: none;
+  color: #444;
+  font-size: 0.95rem;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
-section.passo-conteudo {
+.sidebar-bloco li.active a,
+.sidebar-bloco a:hover {
+  background-color: #5e2b2b;
+  color: white;
+}
+
+/* CONTENT AREA */
+.conteudo-bloco {
   flex: 1;
   background-color: #fff;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-section.passo-conteudo h2 {
-  margin-top: 0;
-  font-size: 1.6rem;
-  color: #333;
+.conteudo-bloco h1 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
 }
 
-section.passo-conteudo p {
-  line-height: 1.6;
-  color: #444;
+/* PASSO */
+.passo {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.passo p {
   font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
-.btn {
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 0.5rem 0.5rem 0.5rem 0;
-}
-
-.btn.primary {
-  background-color: #5e2b2b;
-  color: #fff;
-}
-
-.btn.primary:hover {
-  background-color: #4a1f1f;
-}
-
-.btn.secondary {
-  background-color: #5e2b2b;
-  color: #fff;
-}
-
-.btn.secondary:hover {
-  background-color: #4a1f1f;
-}
-
-.sidebar ul li a {
-  color: inherit;
-  text-decoration: none;
+/* IMAGEM */
+.imagem-processo {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  max-width: 720px;
+  height: auto !important;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin: 1rem auto;
 }
 
-.sidebar ul li a:hover {
-  text-decoration: none;
-}
-
-
-
+/* RESPONSIVO */
 @media screen and (max-width: 768px) {
-  main.passo-container {
+  .pagina-bloco {
     flex-direction: column;
+  }
+
+  .sidebar-bloco {
+    width: 100%;
+  }
+
+  .conteudo-bloco {
+    width: 100%;
   }
 }
 
-section.passo-conteudo img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 1.5rem auto;
-  border-radius: 6px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+img {
+  position: static !important;
+  right: auto !important;
+  top: auto !important;
+  transform: none !important;
 }
 
+html, body {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+}

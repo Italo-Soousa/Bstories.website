@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import "./index.css";
 
 // Páginas
 import Login from './routes/index.jsx';
@@ -14,11 +15,11 @@ const router = createBrowserRouter([
     element: <Login />
   },
   {
-    path: "Ponto De Vendas",
+    path: "Ponto-De-Vendas",
     element: <PontoDeVendas />
   },
   {
-    path: "Processos PDV",
+    path: "Processos-PDV",
     element: <IndexPDV />
   },
   {
